@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deteksi Penyakit Daun</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌿 Deteksi Penyakit Daun</h1>
+        <p>Upload foto daun untuk mendeteksi penyakitnya</p>
+
+        <div class="upload-area">
+            <input type="file" id="fileInput" accept="image/*">
+            <label for="fileInput">📁 Pilih Foto Daun</label>
+        </div>
+
+        <div id="preview-area" style="display:none;">
+            <img id="preview" src="" alt="Preview foto">
+        </div>
+
+        <button id="btnDeteksi" onclick="deteksi()">🔍 Deteksi Sekarang</button>
+
+        <div id="hasil" style="display:none;">
+            <h2>Hasil Deteksi:</h2>
+            <p id="hasilText"></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
